@@ -1,0 +1,10 @@
+/* SettingsPage.css */
+.right-content-background {
+    background-image: url('../assets/Ongrid.png');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+.half-height-button {
+    height: 50%; /* Adjust this value as needed */
+  }
