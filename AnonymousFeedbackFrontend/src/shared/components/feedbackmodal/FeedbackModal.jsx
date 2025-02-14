@@ -46,7 +46,7 @@ const FeedbackModal = ({
 
         {/* Feedback Message Input */}
         <textarea
-          placeholder="Enter Feedback maximum limit = 500"
+          placeholder="Enter Feedback maximum limit = 500 characters"
           className="w-full p-2 border mb-2"
           value={feedbackMessage}
           onChange={onFeedbackChange} // Corrected function

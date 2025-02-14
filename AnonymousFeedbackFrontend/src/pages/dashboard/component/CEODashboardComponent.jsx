@@ -21,9 +21,9 @@ export default function CEODashboardComponent({
     onFeedbackMessageChange,
   }) {
     return (
-      <div className="flex flex-col h-screen w-screen">
+      <div className="flex flex-col h-screen w-screen sticky">
         {/* Navbar */}
-        <nav className="bg-gray-900 text-white p-4 flex justify-between items-center">
+        <nav className="bg-gray-900 text-white p-4 flex justify-between items-center sticky">
           <h1 className="text-xl font-bold">Anonymous Feedback</h1>
           <div className="space-x-4">
             <button className="px-4 py-2 bg-gray-700 rounded" onClick={onNavigateToSettings}>
@@ -37,8 +37,8 @@ export default function CEODashboardComponent({
   
         <div className="flex flex-grow">
           {/* Sidebar */}
-          <div className="w-1/4 bg-gray-800 text-white p-4 flex flex-col">
-            <h2 className="text-xl font-bold mb-4">CEO Dashboard</h2>
+          <div className="w-1/4 bg-gray-800 text-white p-4 flex flex-col ">
+            <h2 className="text-xl font-bold mb-4 ">CEO Dashboard</h2>
             <button
               className="flex-1 py-2 bg-gray-700 rounded mb-2 button-height"
               onClick={onToggleApproved}
@@ -105,7 +105,7 @@ export default function CEODashboardComponent({
                         <p className={`text-gray-600 mt-1 ${expandedFeedbackId === review.id ? "" : "line-clamp-3"}`}>
                           {review.message}
                         </p>
-                        {review.message.length > 100 && (
+                        {review.message.length > 150 && (
                           <button
                             onClick={() => onToggleFeedback(review.id)}
                             className="text-blue-600 hover:text-blue-800 mt-2"

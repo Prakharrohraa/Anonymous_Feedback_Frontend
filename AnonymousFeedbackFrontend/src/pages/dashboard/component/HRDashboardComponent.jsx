@@ -30,9 +30,9 @@ const HRDashboardComponent = ({
     return (
      <div className="flex flex-col h-screen w-screen">
            {/* Navbar */}
-           <nav className="bg-gray-900 text-white p-4 flex justify-between items-center">
-             <h1 className="text-xl font-bold">HR Dashboard</h1>
-             <div className="space-x-4">
+           <nav className="bg-gray-900 text-white p-4 flex justify-between items-center ">
+             <h1 className="text-xl font-bold ">HR Dashboard</h1>
+             <div className="space-x-4 ">
                <button className="px-4 py-2 bg-gray-700 rounded" onClick={() => navigate("/settings")}>
                  Settings
                </button>
@@ -61,7 +61,7 @@ const HRDashboardComponent = ({
                  {showPending ? "Hide Pending Reviews" : "Show Pending Reviews"}
                </button>
                <button
-                 className="flex-1 py-2 bg-gray-700 rounded mb-2 sidebutton button-height"
+                 className="flex-1 py-2 bg-gray-700 rounded mb-2 button-height"
                  onClick={() => setShowAllFeedbacks(!showAllFeedbacks)}
                >
                  {showAllFeedbacks ? "Hide All Feedbacks" : "Show All Feedbacks"}
@@ -113,7 +113,7 @@ const HRDashboardComponent = ({
                    {allFeedbacks.length > 0 ? (
                      <div className="space-y-4">
                        {allFeedbacks.map((feedback) => (
-                         <div key={feedback.id} className="bg-white p-4 rounded-lg ">
+                         <div key={feedback.id} className="bg-white p-4 rounded-lg shadow-sm">
                            <strong className="text-gray-700">{feedback.receiverName}:</strong>
                            <p className={`text-gray-600 mt-1 ${expandedFeedbackId === feedback.id ? "" : "line-clamp-3"}`}>
                              {feedback.content}
@@ -121,7 +121,7 @@ const HRDashboardComponent = ({
                            {feedback.content.length > 100 && (
                              <button
                                onClick={() => toggleFeedback(feedback.id)}
-                               className="text-blue-600 hover:text-blue-800 mt-2 sidebutton"
+                               className="text-blue-600 hover:text-blue-800 mt-2"
                              >
                                {expandedFeedbackId === feedback.id ? "Read less" : "Read more..."}
                              </button>
