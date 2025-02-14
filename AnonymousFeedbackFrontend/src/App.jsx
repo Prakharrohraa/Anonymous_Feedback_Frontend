@@ -39,7 +39,6 @@ const AuthRoute = ({ children }) => {
         dashboardPath = '/dashboard/employee';
         break;
       default:
-        // Clear cookies for invalid roles and redirect to login
         Cookies.remove("authToken");
         Cookies.remove("userRole");
         Cookies.remove("userID");

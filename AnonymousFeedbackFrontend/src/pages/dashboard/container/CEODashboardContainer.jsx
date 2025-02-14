@@ -49,12 +49,14 @@ export default function CEODashboardContainer() {
   // Fetch users for feedback modal
   useEffect(() => {
     if (showFeedbackModal) {
-      axios
+      const data = axios
         .get("http://localhost:8080/api/user/getall", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => setUsers(res.data))
         .catch((err) => console.error("Error fetching users:", err));
+        console.log(data);
+        
     }
   }, [showFeedbackModal, token]);
 
